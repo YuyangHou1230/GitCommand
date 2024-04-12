@@ -49,7 +49,7 @@ git merge <branch>
 
 # 三、 远程仓库
 
-## 3.1 从远程仓库克隆代码（一般是用于下载代码）
+## 3.1 从远程仓库克隆代码（一般是用于下载代码，远程仓库有代码）
 ```bash
 # 克隆远程仓库（例如 git clone http://192.168.10.6:3000/AMC/NewReposity.git）
 git clone <url>
@@ -61,7 +61,7 @@ git clone <remote_name> <url>
 git checkout -b <name> origin/<name>
 ```
 
-## 3.2 已经有本地仓库，与远程仓库建立连接（一般是将本地的代码上传至新的远程仓库）
+## 3.2 已经有本地仓库，与远程仓库建立连接（一般是将本地的代码上传至新的远程仓库，远程仓库没有代码）
 ```bash
 # 查看远程仓库信息
 git remote -v
@@ -74,14 +74,20 @@ git branch --set-upstream-to=<origin>/<remote-branch> <local-branch>
 ```
 
 ## 3.3 推送代码到远程仓库
-一般来说本地分支与远程分支是一一对应的，且最好是同名的，防止混淆
+本地分支与远程分支是一一对应的，一般来说最好是同名的，防止混淆。
 ```bash
 
-# 推动代码到远程
+# 推动代码到远程（本地分支未跟随远程分支）
 git push <remote-reposity> <branch> # 例： git push origin main
 
 # 推动代码到远程，并设置该分支跟随远程分支
-git push -u <remote-reposity> <branch> # 例： git push origin main
+git push -u <remote-reposity> <branch> # 例： git push -u origin main
+
+# 强制推送本地代码到远程,会直接覆盖远程仓库，如果没有对应远程分支，则会创建，慎用！一般第一次提交使用
+git push -uf <remote-reposity> <branch> # 例： git push -uf origin main
+
+# 推动代码到远程（本地分支已跟随远程分支）
+git push  # 例： git push
 
 ```
 
