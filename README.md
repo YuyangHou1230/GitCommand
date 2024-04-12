@@ -3,12 +3,12 @@
 git为了区分不同用户的提交信息，会要求配置使用者的用户名和邮箱信息。
 配置分为全局配置和特定配置。
 
-## 1.1全局配置
+## 1.1 全局配置
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
-## 2. 设置特定仓库用户名和邮箱
+## 1.2 设置特定仓库用户名和邮箱
 ```bash
 cd /path/to/your/repository  # 进入到仓库所在的目录中
 git config user.name "Your Name"
@@ -92,7 +92,7 @@ git push  # 例： git push
 ```
 
 
-# 开发过程常用命令
+# 四、 开发过程常用命令
 ```bash
 #查看本地仓库状态
 git status
@@ -121,6 +121,6 @@ git push
 
 ```
 
-# git 客户端推荐--Fork
+# 五、 git 客户端推荐--Fork
 ![这里是图片的描述文字](http://192.168.10.6:3000/AMC/GitDemo/src/main/image/Fork.png 'Fork')
 [下载地址](https://www.git-fork.com/)
