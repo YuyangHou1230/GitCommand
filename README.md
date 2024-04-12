@@ -123,3 +123,8 @@ git push
 
 # 五、 git 客户端推荐--Fork
 [下载地址](https://www.git-fork.com/)
+
+# 六、 参考
+[git教程](https://www.runoob.com/git/git-tutorial.html)
+
+[分支管理](https://blog.csdn.net/qq_37974755/article/details/126304583)
